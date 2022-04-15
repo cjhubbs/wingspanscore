@@ -1,0 +1,12 @@
+<h2>Recent Games...</h2>
+
+<table class="table">
+  <tr><th>Date</th><th>Winner</th></tr>
+  <%  @recent_games.each do |g| %>
+  <tr><td><%= g.date %></td><td><%= g.winner.name %></td></tr>
+  <% end %>
+</table>
+
+<h2><%= link_to "Score a New Game", new_game_path %></h2>
+
+<%= link_to "Edit Players", players_path %>

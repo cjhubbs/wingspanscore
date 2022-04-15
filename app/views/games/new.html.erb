@@ -1,0 +1,11 @@
+<h2>Create a New Game</h2>
+
+<h3>Select players...</h3>
+
+<%= form_with model: @game do |f| %>
+
+<% @players.each do |p| %>
+  <%= f.check_box :player_id %><%= p.name %></br>
+<% end %>
+<%= f.submit "Create" %>
+<% end %>
